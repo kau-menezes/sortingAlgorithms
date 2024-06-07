@@ -5,7 +5,7 @@ void selection_sort(int array[], int size)
 {
 
     // inicialy, the smallest portion of the array would be the first we're analysing
-    int smallest = array[0];
+    int smallest = NULL;
     int aux = 0;
 
     // loop that occurs for each of the elements of the array
@@ -17,6 +17,7 @@ void selection_sort(int array[], int size)
         for (int j = i + 1; j < size - 1; j++)
         {
 
+            // if the element im analysing is smaller then the smallest, the smallest turns into the index im analysing now
             if (array[j] < array[smallest])
             {
                 smallest = j;
@@ -25,6 +26,7 @@ void selection_sort(int array[], int size)
 
         }
 
+        // swap
         aux = array[smallest]; 
         array[smallest] = array[i];
         array[i] = aux;

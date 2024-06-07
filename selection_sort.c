@@ -4,12 +4,14 @@
 void selection_sort(int array[], int size)
 {
 
+    // inicialy, the smallest portion of the array would be the first we're analysing
     int smallest = array[0];
     int aux = 0;
 
+    // loop that occurs for each of the elements of the array
     for (int i = 0; i < size - 1; i++)
     {
-
+        // the smallest is set to the position that's being analysed 
         smallest = i;
 
         for (int j = i + 1; j < size - 1; j++)

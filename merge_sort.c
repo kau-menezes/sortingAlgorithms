@@ -59,7 +59,7 @@ void divide(int *array, int size)
     }
 
     int left_size = size / 2;
-    int right_size = left_size + (size &1) ;
+    int right_size = left_size + (size % 2) ;
 
     divide(array, left_size);
     divide(array + left_size, right_size);
